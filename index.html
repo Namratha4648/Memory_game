@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Matching Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Memory Matching Game</h1>
+        
+        <!-- Level Selection Screen -->
+        <div id="selection-screen" class="selection-screen">
+            <div class="level-selection">
+                <h2>Select Difficulty</h2>
+                <div class="level-cards">
+                    <div class="level-card" id="easy-level">
+                        <div class="level-icon">🌱</div>
+                        <h3>Easy</h3>
+                        <p>6 Cards</p>
+                        <p>Perfect for beginners</p>
+                    </div>
+                    <div class="level-card" id="medium-level">
+                        <div class="level-icon">🌿</div>
+                        <h3>Medium</h3>
+                        <p>12 Cards</p>
+                        <p>A bit more challenging</p>
+                    </div>
+                    <div class="level-card" id="hard-level">
+                        <div class="level-icon">🌳</div>
+                        <h3>Hard</h3>
+                        <p>24 Cards</p>
+                        <p>For memory masters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Screen (Initially Hidden) -->
+        <div id="game-screen" class="game-screen" style="display: none;">
+            <div class="game-controls">
+                <button id="home-btn" class="home-btn">Back to Menu</button>
+                <button id="restart-btn" class="restart-btn">Restart</button>
+            </div>
+            
+            <div class="game-info">
+                <div class="info-box">
+                    <h3>Moves</h3>
+                    <p id="moves">0</p>
+                </div>
+                <div class="info-box">
+                    <h3>Time</h3>
+                    <p id="timer">00:00</p>
+                </div>
+                <div class="info-box">
+                    <h3>Matches</h3>
+                    <p id="matches">0 / <span id="total-pairs">3</span></p>
+                </div>
+            </div>
+
+            <div class="game-board" id="game-board"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="win-modal">
+        <div class="modal-content">
+            <h2>Congratulations! 🎉</h2>
+            <p>You've matched all pairs!</p>
+            <p>Time: <span id="final-time">00:00</span></p>
+            <p>Moves: <span id="final-moves">0</span></p>
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <button id="play-again-btn">Play Again</button>
+                <button id="back-to-menu-btn">Back to Menu</button>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
